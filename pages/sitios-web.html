@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ===== HEAD: Metadatos, fuentes y estilos ===== -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitios Web | Bruno Dev</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Framework CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Estilos específicos de esta página -->
+    <style>
+        /* Layout de página interna: una sola columna centrada */
+        body {
+            display: block;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Header simplificado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            margin-bottom: 20px;
+            grid-area: unset;
+            max-width: 100%;
+        }
+
+        /* Título de la página */
+        .pagina-titulo {
+            padding: 30px 0 10px;
+        }
+
+        .pagina-titulo h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .pagina-titulo h1 span {
+            color: #634e48;
+        }
+
+        .pagina-titulo p {
+            color: #666;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Galería de proyectos */
+        .galeria {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        /* Card de proyecto individual */
+        .galeria-card {
+            background-color: rgb(221, 220, 220);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Imagen del proyecto */
+        .galeria-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-card:hover img {
+            transform: scale(1.01);
+        }
+
+        /* Información del proyecto */
+        .galeria-info {
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .galeria-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .galeria-info p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Badges de tecnologías */
+        .galeria-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        .galeria-badges span {
+            background-color: #634e48;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Botón volver */
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: #634e48;
+            color: white !important;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 30px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-volver:hover {
+            background-color: #4e3c37;
+            color: white !important;
+        }
+
+        /* Footer simplificado */
+        footer {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        /* Responsive móvil */
+        @media (max-width: 768px) {
+            .galeria-info {
+                flex-direction: column;
+            }
+
+            .galeria-badges {
+                justify-content: flex-start;
+            }
+
+            .galeria-card img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<!-- ===== BODY ===== -->
+
+<body>
+
+    <!-- HEADER: Navegación simplificada -->
+    <header class="fondo">
+        <div class="header-logo">
+            <img src="../assets/img/logo.png" alt="logo">
+            <span class="logo-nombre">Bruno S. Alejandro <strong>Dev</strong></span>
+        </div>
+        <a href="../index.html" class="btn-cv">
+            <i class="fa-solid fa-arrow-left"></i> Volver al portafolio
+        </a>
+    </header>
+
+    <!-- TÍTULO DE LA PÁGINA -->
+    <div class="pagina-titulo">
+        <h1>Sitios <span>Web</span></h1>
+        <p>Diseño y desarrollo de sitios web modernos, responsivos y funcionales. Cada proyecto es construido desde cero
+            utilizando <strong>HTML5</strong>, <strong>CSS3</strong> y <strong>JavaScript</strong>, aplicando buenas
+            prácticas de maquetación con <strong>CSS Grid</strong> y el framework <strong>Bootstrap</strong> para
+            garantizar una experiencia óptima en cualquier dispositivo.</p>
+    </div>
+
+    <!-- GALERÍA DE PROYECTOS -->
+    <div class="galeria">
+
+        <!-- Proyecto 1: Portafolio modo claro -->
+        <div class="galeria-card">
+            <img src="../assets/img/sitio-claro.png" alt="Portafolio Bruno Dev - Modo claro">
+            <div class="galeria-info">
+                <div>
+                    <h3>Portafolio Personal — Modo claro</h3>
+                    <p>Sitio web de portafolio personal desarrollado con HTML5, CSS Grid y Bootstrap. Incluye modo
+                        oscuro, menú responsive y descarga de CV.</p>
+                </div>
+                <div class="galeria-badges">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 2: Portafolio modo oscuro -->
+        <div class="galeria-card">
+            <img src="../assets/img/sitio-oscuro.png" alt="Portafolio Bruno Dev - Modo oscuro">
+            <div class="galeria-info">
+                <div>
+                    <h3>Portafolio Personal — Modo oscuro</h3>
+                    <p>Vista del mismo portafolio en modo oscuro, implementado con JavaScript y localStorage para
+                        recordar la preferencia del usuario.</p>
+                </div>
+                <div class="galeria-badges">
+                    <span>JavaScript</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botón volver -->
+    <a href="../index.html" class="btn-volver">
+        <i class="fa-solid fa-arrow-left"></i> Volver al portafolio
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="fondo">
+        <p>&copy;2026 Bruno | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Script modo oscuro -->
+    <script>
+        const body = document.body;
+        if (localStorage.getItem('dark') === 'true') {
+            body.classList.add('dark');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ============================================================
+     HEAD: Metadatos, estilos y recursos externos
+     ============================================================ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Bruno S. Alejandro Dev</title>
+
+    <!-- Fuentes e iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Favicon y estilos personalizados -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<!-- ============================================================
+     BODY: Contenido visible del portafolio
+     ============================================================ -->
+
+<body>
+
+    <!-- ==========================================================
+         HEADER: Barra de navegación principal
+         ========================================================== -->
+    <header class="fondo">
+        <!-- Logo -->
+        <div class="header-logo">
+            <img src="assets/img/logo.png" alt="logo">
+            <span class="logo-nombre">Bruno S. Alejandro <strong>Dev</strong></span>
+        </div>
+
+        <!-- Botón modo oscuro -->
+        <button class="btn-darkmode" id="toggleDark" title="Cambiar modo">
+            <i class="fa-solid fa-moon" id="iconoDark"></i>
+        </button>
+
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button class="hamburguesa d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile"
+            aria-controls="menuMobile">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Menú normal (visible en tablet y desktop) -->
+        <nav class="menu d-none d-md-flex">
+            <ul>
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="assets/docs/cv-bruno.pdf" download class="btn-cv">
+                <i class="fa-solid fa-download"></i> Descargar CV
+            </a>
+        </nav>
+    </header>
+
+    <!-- ==========================================================
+         MENÚ MÓVIL: Offcanvas para dispositivos pequeños
+         ========================================================== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMobile" aria-labelledby="menuMobileLabel">
+        <div class="offcanvas-header">
+            <div class="header-logo">
+                <img src="assets/img/logo.png" alt="logo" style="height:40px;">
+                <span class="logo-nombre">Bruno <strong>Dev</strong></span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="menu-mobile-lista">
+                <li><a href="#sobremi" data-bs-dismiss="offcanvas">Sobre mí</a></li>
+                <li><a href="#proyectos" data-bs-dismiss="offcanvas">Proyectos</a></li>
+                <li><a href="#contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+            </ul>
+            <a href="assets/docs/cv-bruno.pdf" download class="btn-cv"
+                style="width:100%; justify-content:center; margin-top:20px;">
+                <i class="fa-solid fa-download"></i> Descargar CV
+            </a>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         SECTION: Hero / Presentación principal
+         ========================================================== -->
+    <section class="section">
+        <!-- Columna izquierda: texto y decoración -->
+        <div class="fondo">
+            <div class="deco-circulos">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="55" fill="none" stroke="#634e48" stroke-width="1" opacity="0.3" />
+                    <circle cx="60" cy="60" r="42" fill="none" stroke="#634e48" stroke-width="1" opacity="0.5" />
+                    <circle cx="60" cy="60" r="29" fill="none" stroke="#634e48" stroke-width="1" opacity="0.7" />
+                    <circle cx="60" cy="60" r="16" fill="none" stroke="#634e48" stroke-width="1.5" opacity="1" />
+                    <circle cx="60" cy="60" r="4" fill="#634e48" opacity="1" />
+                </svg>
+            </div>
+            <h1>Front-end Developer <span>Trainee</span> apasionado por crear <span>experiencias digitales</span></h1>
+        </div>
+
+        <!-- Columna derecha: foto de perfil -->
+        <div>
+            <img src="assets/img/bruno.png" alt="foto de perfil">
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         MAIN: Contenido principal (Sobre mí + Contacto)
+         ========================================================== -->
+    <main>
+        <!-- Sección Sobre mí -->
+        <section id="sobremi" class="fondo">
+            <h2>Sobre mí</h2>
+            <p>¡Hola! Soy Bruno, un apasionado del desarrollo web en formación. Actualmente estoy cursando un
+                bootcamp de Front-end donde estoy fortaleciendo mis habilidades en <strong>HTML5, CSS y
+                    JavaScript</strong>, combinando mis conocimientos en <strong>diseño</strong> para crear interfaces
+                atractivas y funcionales.</p>
+            <p>Además, tengo nociones básicas de <strong>Java</strong> que me han permitido comprender mejor la
+                lógica de programación y el funcionamiento del backend, lo que me ayuda a tener una visión más completa
+                del desarrollo de aplicaciones.</p>
+            <p>Estoy en constante aprendizaje, buscando siempre nuevos retos que me permitan crecer como
+                desarrollador y aportar valor a los proyectos en los que participo.</p>
+
+            <!-- Badges de habilidades -->
+            <div class="habilidades">
+                <span class="badge html">HTML5</span>
+                <span class="badge css">CSS3</span>
+                <span class="badge js">JavaScript</span>
+                <span class="badge java">Java</span>
+                <span class="badge diseno">Diseño Gráfico</span>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="fondo fondo-oscuro">
+            <h2>Contacto</h2>
+
+            <!-- Indicador de disponibilidad -->
+            <div class="disponibilidad">
+                <span class="estado-dot"></span>
+                <p>Disponible para proyectos</p>
+            </div>
+
+            <p class="contacto-subtitulo">¿Necesitas una web que conecte con tus clientes? ¡Hablemos!</p>
+
+            <!-- Información de contacto -->
+            <div class="contacto-info">
+                <p><i class="fa-solid fa-envelope"></i> bruno@email.com</p>
+                <p><i class="fa-solid fa-phone"></i> +56 9 1234 5678</p>
+            </div>
+
+            <!-- Horario de atención -->
+            <div class="contacto-horario">
+                <p class="horario-titulo"><i class="fa-solid fa-clock"></i> Horario de atención</p>
+                <div class="horario-fila">
+                    <span>Lunes a Viernes</span>
+                    <span>18:00 - 21:00</span>
+                </div>
+                <div class="horario-fila">
+                    <span>Sábado</span>
+                    <span class="cerrado">Cerrado</span>
+                </div>
+                <div class="horario-fila">
+                    <span>Domingo</span>
+                    <span class="cerrado">Cerrado</span>
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="contacto-cta">
+                <a href="mailto:bruno@email.com" class="btn-cta">
+                    <i class="fa-solid fa-envelope"></i> Enviar email
+                </a>
+                <a href="https://wa.me/56912345678" target="_blank" class="btn-cta btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================
+         ASIDE: Barra lateral (Proyectos, Herramientas, Redes)
+         ========================================================== -->
+    <aside>
+
+        <!-- ===== SECCIÓN PROYECTOS ===== -->
+        <div id="proyectos" class="fondo">
+            <h2>Proyectos</h2>
+            <div class="proyectos-lista">
+
+                <!-- Tarjeta: Sitios web -->
+                <a href="#" class="proyecto-card" data-bs-toggle="modal" data-bs-target="#modalSitiosWeb">
+                    <div class="proyecto-img">
+                        <img src="assets/img/sitioweb.png" alt="Sitios web">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Sitios web</h3>
+                        <p>Diseño y desarrollo de sitios web modernos y responsivos.</p>
+                    </div>
+                </a>
+
+                <!-- Tarjeta: Diseño gráfico -->
+                <a href="#" class="proyecto-card" data-bs-toggle="modal" data-bs-target="#modalDiseno">
+                    <div class="proyecto-img">
+                        <img src="assets/img/diseño.png" alt="Diseño gráfico">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Diseño gráfico</h3>
+                        <p>Identidad visual, branding y piezas gráficas para distintas plataformas.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== MODAL: Sitios Web ===== -->
+        <div class="modal fade" id="modalSitiosWeb" tabindex="-1" aria-labelledby="modalSitiosWebLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSitiosWebLabel">Sitios web</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/img/sitioweb.png" alt="Sitios web" width="100%"
+                            style="border-radius:5px; margin-bottom:15px;">
+                        <p>Diseño y desarrollo de landing pages y sitios corporativos con HTML, CSS y JavaScript.
+                            Enfocado en crear experiencias atractivas, funcionales y responsivas.</p>
+                        <div class="d-flex gap-2 flex-wrap mt-3">
+                            <span class="badge bg-secondary">HTML5</span>
+                            <span class="badge bg-secondary">CSS3</span>
+                            <span class="badge bg-secondary">JavaScript</span>
+                            <span class="badge bg-secondary">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="pages/sitios-web.html" class="btn" style="background-color:#634e48; color:white;">Ver
+                            proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MODAL: Diseño Gráfico ===== -->
+        <div class="modal fade" id="modalDiseno" tabindex="-1" aria-labelledby="modalDisenoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDisenoLabel">Diseño gráfico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/img/diseño.png" alt="Diseño gráfico" width="100%"
+                            style="border-radius:5px; margin-bottom:15px;">
+                        <p>Creación de identidades visuales, logos y material digital para redes sociales. Combinando
+                            diseño y creatividad para comunicar de forma efectiva.</p>
+                        <div class="d-flex gap-2 flex-wrap mt-3">
+                            <span class="badge bg-secondary">Figma</span>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">Procreate</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="pages/diseno-grafico.html" class="btn"
+                            style="background-color:#634e48; color:white;">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECCIÓN HERRAMIENTAS ===== -->
+        <div class="herramientas fondo">
+            <h3>Herramientas</h3>
+            <div class="herramientas-lista">
+                <div class="herramienta-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                        alt="VS Code">
+                    <span>VS Code</span>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="herramienta-item">
+                    <i class="fa-brands fa-figma"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                        alt="Photoshop">
+                    <span>Photoshop</span>
+                </div>
+                <div class="herramienta-item">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <span>Procreate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECCIÓN REDES SOCIALES ===== -->
+        <div class="redes fondo">
+            <a href="https://github.com/Kurobittsu" target="_blank" class="red-link">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="red-link">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="red-link">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ==========================================================
+         FOOTER: Pie de página
+         ========================================================== -->
+    <footer class="fondo">
+        <p>&copy;2026 Bruno S. Alejandro Dev | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- ==========================================================
+     SCRIPTS: Bootstrap y funcionalidad modo oscuro
+     ========================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script>
+        // ==========================================================
+        // MODO OSCURO: Toggle y persistencia en localStorage
+        // ==========================================================
+        const toggleDark = document.getElementById('toggleDark');
+        const iconoDark = document.getElementById('iconoDark');
+        const body = document.body;
+
+        // Cargar preferencia guardada
+        if (localStorage.getItem('dark') === 'true') {
+            body.classList.add('dark');
+            iconoDark.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Evento de clic para alternar modo
+        toggleDark.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            iconoDark.classList.replace(
+                isDark ? 'fa-moon' : 'fa-sun',
+                isDark ? 'fa-sun' : 'fa-moon'
+            );
+            localStorage.setItem('dark', isDark);
+        });
+    </script>
+</body>
+
+</html>

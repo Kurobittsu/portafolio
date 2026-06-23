@@ -1,0 +1,959 @@
+/* ==========================================================
+   IMPORTACIÓN DE FUENTES
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+/* ==========================================================
+   RESET Y ESTILOS GENERALES
+   ========================================================== */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 440px);
+    grid-template-rows: 85px auto auto auto 85px;
+    grid-template-areas:
+        "header header header"
+        "section section aside"
+        "section section aside"
+        "main main aside"
+        "footer footer footer";
+    gap: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, i {
+    color: rgb(27, 27, 27);
+}
+
+hr {
+    border-color: #634e48;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #634e48;
+}
+
+
+/* ==========================================================
+   FONDOS Y CONTENEDORES PRINCIPALES
+   ========================================================== */
+.fondo {
+    background-color: rgb(221, 220, 220);
+    border-radius: 5px;
+}
+
+header,
+footer {
+    max-width: 1340px;
+}
+
+.section,
+main {
+    max-width: 880px;
+}
+
+aside {
+    max-width: 440px;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    grid-area: header;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+/* Logo */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-nombre {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.5px;
+}
+
+.logo-nombre strong {
+    font-weight: 800;
+    color: #634e48;
+}
+
+/* Menú de navegación */
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu ul {
+    display: flex;
+    list-style: none;
+    column-gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botón descargar CV */
+.btn-cv {
+    padding: 8px 16px;
+    background-color: #634e48;
+    color: white !important;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.btn-cv:hover {
+    background-color: #4e3c37;
+    color: white !important;
+}
+
+.btn-cv i {
+    color: white;
+    font-size: 13px;
+}
+
+/* Hamburguesa (móvil) */
+.hamburguesa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburguesa i {
+    font-size: 22px;
+    color: #634e48;
+}
+
+/* Menú móvil offcanvas */
+.menu-mobile-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-mobile-lista li a {
+    display: block;
+    padding: 12px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(27, 27, 27);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.menu-mobile-lista li a:hover {
+    color: #634e48;
+    padding-left: 15px;
+}
+
+/* Botón modo oscuro */
+.btn-darkmode {
+    background-color: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-darkmode::after {
+    content: "Modo oscuro";
+    font-size: 13px;
+    font-weight: 600;
+    color: #634e48;
+}
+
+.btn-darkmode i {
+    font-size: 16px;
+    color: #634e48;
+}
+
+.btn-darkmode:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================================
+   SECTION: HERO / PRESENTACIÓN
+   ========================================================== */
+.section {
+    grid-area: section;
+    display: flex;
+    column-gap: 10px;
+    margin: 15px 0;
+}
+
+.section .fondo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.section .fondo div {
+    width: 50%;
+}
+
+.section .fondo h1 span {
+    font-size: 40px;
+    color: #634e48;
+}
+
+.section img {
+    border-radius: 5px;
+}
+
+.section > div:last-child {
+    background-color: rgb(221, 220, 220);
+    border-radius: 5px;
+}
+
+
+/* ==========================================================
+   DECORACIÓN: Círculos animados
+   ========================================================== */
+.deco-circulos {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    animation: rotar 12s linear infinite;
+}
+
+.deco-circulos svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+/* ==========================================================
+   MAIN: SOBRE MÍ Y CONTACTO
+   ========================================================== */
+main {
+    grid-area: main;
+    display: flex;
+    column-gap: 10px;
+    height: auto;
+}
+
+main section h2 {
+    margin-bottom: 15px;
+}
+
+main #sobremi,
+main #contacto {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    overflow-y: auto;
+}
+
+main #sobremi p {
+    margin-bottom: 10px;
+}
+
+/* Contacto - fondo oscuro */
+main #contacto.fondo-oscuro {
+    background-color: #634e48;
+}
+
+main #contacto.fondo-oscuro p,
+main #contacto.fondo-oscuro h2 {
+    color: white;
+}
+
+/* Badges de habilidades */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.habilidades .badge {
+    background-color: #634e48;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.habilidades .badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modo oscuro para la galería */
+body.dark .galeria-card {
+    background-color: #2a2a2a;
+}
+
+body.dark .galeria-img {
+    background-color: #1a1a1a;
+}
+
+body.dark .galeria-info h3 {
+    color: #e0e0e0;
+}
+
+body.dark .galeria-info p {
+    color: #aaaaaa;
+}
+
+body.dark .galeria-tools span,
+body.dark .galeria-tools i {
+    color: #c9a99f;
+}
+
+/* ==========================================================
+   SECCIÓN CONTACTO
+   ========================================================== */
+.contacto-subtitulo {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.disponibilidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.disponibilidad p {
+    color: #7dffb3;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Punto de estado con animación */
+.estado-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #7dffb3;
+    border-radius: 50%;
+    animation: pulso 1.5s infinite;
+}
+
+@keyframes pulso {
+    0%   { box-shadow: 0 0 0 0 rgba(125, 255, 179, 0.6); }
+    70%  { box-shadow: 0 0 0 8px rgba(125, 255, 179, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(125, 255, 179, 0); }
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.contacto-info p,
+.contacto-info i {
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Horario */
+.contacto-horario {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+
+.horario-titulo {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.horario-titulo i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.horario-fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.horario-fila span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.cerrado {
+    color: #ff7c7c !important;
+    font-weight: 600;
+}
+
+/* Botones CTA */
+.contacto-cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    flex: 1;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-cta:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5a;
+    color: white;
+}
+
+.btn-github {
+    background-color: #24292e;
+    border-color: #24292e;
+}
+
+.btn-github:hover {
+    background-color: #1b1f23;
+    color: white;
+}
+
+/* ==========================================================
+   ASIDE: PROYECTOS, HERRAMIENTAS Y REDES
+   ========================================================== */
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside #proyectos,
+aside .redes {
+    margin: 15px 0 0 15px;
+    padding: 20px;
+}
+
+aside .redes {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+aside #proyectos > h2 {
+    margin-top: 30px;
+}
+
+aside #proyectos a div {
+    margin: 30px 0;
+}
+
+aside #proyectos a div h3 {
+    margin-bottom: 15px;
+}
+
+aside #proyectos a div img {
+    width: 100%;
+}
+
+/* Tarjetas de proyectos */
+.proyectos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.proyecto-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-img {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+.proyecto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-img img {
+    transform: scale(1.05);
+}
+
+.proyecto-info {
+    padding: 12px 15px;
+}
+
+.proyecto-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: rgb(27, 27, 27);
+}
+
+.proyecto-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* ==========================================================
+   HERRAMIENTAS
+   ========================================================== */
+.herramientas {
+    margin: 10px 0 0 15px;
+    padding: 20px;
+}
+
+.herramientas h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.herramientas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.herramienta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.herramienta-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.herramienta-item i {
+    font-size: 18px;
+    color: #634e48;
+}
+
+.herramienta-item img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.herramienta-item span {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(27, 27, 27);
+}
+
+
+/* ==========================================================
+   REDES SOCIALES
+   ========================================================== */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px !important;
+}
+
+.red-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    flex: 1;
+}
+
+.red-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.red-link i {
+    font-size: 24px;
+    color: #634e48;
+}
+
+.red-link span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #634e48;
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+    grid-area: footer;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* ==========================================================
+   MEDIA QUERIES
+   ========================================================== */
+
+/* ---- TABLET (768px - 1024px) ---- */
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 85px auto auto auto 85px;
+        grid-template-areas:
+            "header header"
+            "section section"
+            "main aside"
+            "main aside"
+            "footer footer";
+        margin: 8px;
+        gap: 8px;
+    }
+
+    .section {
+        flex-direction: column;
+        margin: 8px 0;
+    }
+
+    .section .fondo {
+        width: 100%;
+    }
+
+    .section img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main #sobremi,
+    main #contacto {
+        width: 100%;
+    }
+}
+
+/* ---- MÓVIL (menos de 768px) ---- */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "section"
+            "main"
+            "aside"
+            "footer";
+        margin: 5px;
+        gap: 8px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+        height: auto;
+        padding: 10px 15px;
+        top: 5px;
+    }
+
+    header .menu ul {
+        column-gap: 8px;
+    }
+
+    .btn-cv {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .section {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .section .fondo {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .section .fondo div {
+        width: 100%;
+    }
+
+    .section img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    .section .fondo h1 {
+        font-size: 28px;
+    }
+
+    .section .fondo h1 span {
+        font-size: 28px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main #sobremi,
+    main #contacto {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    aside #proyectos,
+    aside .redes,
+    aside .herramientas {
+        margin: 5px 0 0 0;
+    }
+
+    .contacto-cta {
+        flex-direction: column;
+    }
+
+    .btn-cta {
+        width: 100%;
+    }
+
+    .redes {
+        gap: 10px;
+    }
+
+    .red-link {
+        padding: 10px;
+    }
+}
+
+
+/* ==========================================================
+   MODO OSCURO
+   ========================================================== */
+body.dark {
+    background-color: #1a1a1a;
+}
+
+body.dark .fondo {
+    background-color: #2a2a2a;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark a,
+body.dark li,
+body.dark i,
+body.dark span {
+    color: #e0e0e0;
+}
+
+body.dark .section .fondo h1 span,
+body.dark a:hover,
+body.dark .proyecto-link,
+body.dark .btn-darkmode i,
+body.dark .hamburguesa i {
+    color: #c9a99f;
+}
+
+body.dark .proyecto-card {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .proyecto-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .herramienta-item,
+body.dark .red-link {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .herramienta-item:hover,
+body.dark .red-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .proyecto-info p,
+body.dark .horario-fila span {
+    color: #aaaaaa;
+}
+
+body.dark .proyectos-lista hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .contacto-horario {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .habilidades .badge {
+    background-color: #4a3a35;
+}
+
+body.dark .modal-content {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark .modal-header,
+body.dark .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .btn-close {
+    filter: invert(1);
+}
+
+body.dark .offcanvas {
+    background-color: #2a2a2a;
+}
+
+body.dark .menu-mobile-lista li a {
+    color: #e0e0e0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .section > div:last-child {
+    background-color: #2a2a2a;
+}
+
+body.dark .btn-darkmode::after {
+    content: "Modo claro";
+    color: #f0c070;
+}
+
+.proyecto-info h3,
+.proyecto-info p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Herramientas usadas */
+.galeria-tools {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.galeria-tools i {
+    font-size: 12px;
+    color: #634e48;
+}
+
+.galeria-tools span {
+    font-size: 12px;
+    color: #634e48;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   SCROLL SUAVE
+   ========================================================== */
+html {
+    scroll-behavior: smooth;
+}
+

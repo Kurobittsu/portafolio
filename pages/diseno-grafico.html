@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ===== HEAD: Metadatos, fuentes y estilos ===== -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Gráfico | Bruno Dev</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Framework CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Estilos específicos de esta página -->
+    <style>
+        /* Layout de página interna: una sola columna centrada */
+        body {
+            display: block;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Header simplificado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            margin-bottom: 20px;
+            grid-area: unset;
+            max-width: 100%;
+        }
+
+        /* Título de la página */
+        .pagina-titulo {
+            padding: 30px 0 10px;
+        }
+
+        .pagina-titulo h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .pagina-titulo h1 span {
+            color: #634e48;
+        }
+
+        .pagina-titulo p {
+            color: #666;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Galería en grid de 3 columnas */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        /* Card de cada ilustración */
+        .galeria-card {
+            background-color: rgb(221, 220, 220);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .galeria-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Contenedor de imagen cuadrado */
+        .galeria-img {
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .galeria-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-card:hover .galeria-img img {
+            transform: scale(1.05);
+        }
+
+        /* Información de la ilustración */
+        .galeria-info {
+            padding: 15px;
+        }
+
+        .galeria-info h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .galeria-info p {
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* Badge de categoría */
+        .galeria-badge {
+            display: inline-block;
+            background-color: #634e48;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Botón volver */
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: #634e48;
+            color: white !important;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 30px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-volver:hover {
+            background-color: #4e3c37;
+            color: white !important;
+        }
+
+        /* Footer simplificado */
+        footer {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        /* Responsive tablet */
+        @media (max-width: 768px) {
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Responsive móvil */
+        @media (max-width: 480px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<!-- ===== BODY ===== -->
+
+<body>
+
+    <!-- HEADER: Navegación simplificada -->
+    <header class="fondo">
+        <div class="header-logo">
+            <img src="../assets/img/logo.png" alt="logo">
+            <span class="logo-nombre">Bruno S. Alejandro <strong>Dev</strong></span>
+        </div>
+        <a href="../index.html" class="btn-cv">
+            <i class="fa-solid fa-arrow-left"></i> Volver al portafolio
+        </a>
+    </header>
+
+    <!-- TÍTULO DE LA PÁGINA -->
+    <div class="pagina-titulo">
+        <h1>Diseño <span>Gráfico</span></h1>
+        <p>Creación de ilustraciones y emotes personalizados para la plataforma Twitch. Cada pieza es diseñada desde
+            cero en <strong>Procreate</strong> y finalizada en <strong>Photoshop</strong>, cuidando la expresividad, la
+            identidad visual del canal y los formatos oficiales requeridos por la plataforma.</p>
+    </div>
+
+    <!-- GALERÍA DE ILUSTRACIONES -->
+    <div class="galeria">
+
+        <!-- Ilustración 1: Avatar principal -->
+        <div class="galeria-card">
+            <div class="galeria-img">
+                <img src="../assets/img/emote_main.png" alt="Avatar principal Twitch">
+            </div>
+            <div class="galeria-info">
+                <h3>Avatar principal</h3>
+                <p>Ilustración de perfil estilo chibi diseñada para representar la identidad visual del canal de Twitch.
+                    Incluye expresión característica y paleta de colores personalizada.</p>
+                <div class="galeria-tools">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Procreate · Photoshop</span>
+                </div>
+                <span class="galeria-badge">Ilustración</span>
+            </div>
+        </div>
+
+        <!-- Ilustración 2: Emote Rage -->
+        <div class="galeria-card">
+            <div class="galeria-img">
+                <img src="../assets/img/emote_rage.png" alt="Emote Rage Twitch">
+            </div>
+            <div class="galeria-info">
+                <h3>Emote Rage</h3>
+                <p>Emote de enojo con llamas diseñado para expresar frustración en el chat. Optimizado en tamaño para
+                    los formatos requeridos por Twitch (28px, 56px, 112px).</p>
+                <div class="galeria-tools">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Procreate · Photoshop</span>
+                </div>
+                <span class="galeria-badge">Emote Twitch</span>
+            </div>
+        </div>
+
+        <!-- Ilustración 3: Emote F -->
+        <div class="galeria-card">
+            <div class="galeria-img">
+                <img src="../assets/img/emote_f.png" alt="Emote F Twitch">
+            </div>
+            <div class="galeria-info">
+                <h3>Emote F</h3>
+                <p>Emote de derrota o tristeza para reaccionar en el chat ante momentos difíciles. Diseñado con
+                    expresividad chibi y exportado en los formatos oficiales de Twitch.</p>
+                <div class="galeria-tools">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <span>Procreate · Photoshop</span>
+                </div>
+                <span class="galeria-badge">Emote Twitch</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botón volver -->
+    <a href="../index.html" class="btn-volver">
+        <i class="fa-solid fa-arrow-left"></i> Volver al portafolio
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="fondo">
+        <p>&copy;2026 Bruno | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Script modo oscuro: mantiene preferencia del portafolio principal -->
+    <script>
+        const body = document.body;
+        if (localStorage.getItem('dark') === 'true') {
+            body.classList.add('dark');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -468,16 +468,6 @@ body.dark .galeria-tools i {
     color: white;
 }
 
-.btn-whatsapp {
-    background-color: #25D366;
-    border-color: #25D366;
-}
-
-.btn-whatsapp:hover {
-    background-color: #1ebe5a;
-    color: white;
-}
-
 .btn-github {
     background-color: #24292e;
     border-color: #24292e;
@@ -618,7 +608,7 @@ aside #proyectos a div img {
 
 .herramienta-item i {
     font-size: 18px;
-    color: #634e48;
+    color: #634e48 !important;
 }
 
 .herramienta-item img {
@@ -923,6 +913,10 @@ body.dark .section > div:last-child {
 body.dark .btn-darkmode::after {
     content: "Modo claro";
     color: #f0c070;
+}
+
+body.dark .modal-title {
+    color: #e0e0e0;
 }
 
 .proyecto-info h3,
